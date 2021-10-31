@@ -1,0 +1,18 @@
+@each $name,
+$color in $colors {
+    .text\:#{$name} {
+        color: $color;
+    }
+
+    .border\:#{$name} {
+        border: 2px solid $color;
+    }
+}
+
+.border {
+    border: 2px solid $border-color;
+}
+
+.text\:normal {
+    color: $color;
+}

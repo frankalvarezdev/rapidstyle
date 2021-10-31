@@ -1,0 +1,32 @@
+.breadcrumb {
+    &.has-margin {
+        margin-top: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    a[href] {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a {
+        font-size: 13.5px;
+        color: $color;
+        opacity: 0.6;
+    }
+
+    & .is-active {
+        opacity: 1;
+    }
+
+    a:not(:last-child)::after {
+        display: inline-block;
+        font-family: "Material Icons Round";
+        content: "\e5cc";
+        transform: translate(0, 2px);
+        margin-left: $margin;
+        margin-right: $margin;
+        color: $color;
+    }
+}

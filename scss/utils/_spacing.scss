@@ -1,0 +1,92 @@
+$positions: top,
+bottom,
+left,
+right;
+
+// utils margin y padding
+.mg {
+    margin: $margin;
+}
+
+.pd {
+    padding: $padding
+}
+
+@each $postion in $positions {
+    .pd-#{$postion} {
+        padding-#{$postion}: $padding;
+    }
+
+    .mg-#{$postion} {
+        margin-#{$postion}: $margin;
+    }
+}
+
+.mg-x {
+    margin-right: $margin;
+    margin-left: $margin;
+}
+
+.pd-x {
+    padding-right: $padding;
+    padding-left: $padding;
+}
+
+.mg-y {
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+
+.pd-y {
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+@each $postion in $positions {
+    .mg-#{$postion} {
+        margin-#{$postion}: $margin;
+    }
+
+    .pd-#{$postion} {
+        padding-#{$postion}: $padding;
+    }
+}
+
+@each $name,
+$value in $margins {
+    @each $postion in $positions {
+        .mg-#{$postion}\:#{$name} {
+            margin-#{$postion}: $value;
+        }
+    }
+
+    .mg-x\:#{$name} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .mg-y\:#{$name} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+}
+
+// padding
+@each $name,
+$value in $paddings {
+    @each $postion in $positions {
+        .pd-#{$postion}\:#{$name} {
+            padding-#{$postion}: $value;
+        }
+    }
+
+    .pd-x\:#{$name} {
+        padding-right: $value;
+        padding-left: $value;
+    }
+
+    .pd-y\:#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}

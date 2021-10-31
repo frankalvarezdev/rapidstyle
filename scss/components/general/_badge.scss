@@ -1,0 +1,15 @@
+.badge {
+    display: inline-block;
+    padding: .2em .5em;
+    color: #fff;
+    border-radius: $radius-sm;
+    font-size: .75em;
+    font-weight: 600;
+
+    @each $name,
+    $color in $colors {
+        &.is-#{$name} {
+            background-color: $color;
+        }
+    }
+}

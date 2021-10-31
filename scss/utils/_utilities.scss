@@ -1,0 +1,69 @@
+@import './align';
+@import './colors';
+@import './spacing';
+@import './grid';
+
+// cursor
+.cursor\:pointer {
+    cursor: pointer;
+}
+
+.cursor\:normal {
+    cursor: auto;
+}
+
+.cursor\:not-allowed {
+    cursor: not-allowed;
+}
+
+
+// text align
+.text\:center {
+    text-align: center;
+}
+
+.text\:right {
+    text-align: right;
+}
+
+.text\:left {
+    text-align: left;
+}
+
+
+//section
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section\:lg {
+    margin-top: $margin-lg;
+    margin-bottom: $margin-lg;
+}
+
+
+//radius
+.radius\:sm {
+    border-radius: $radius-sm;
+}
+
+.radius {
+    border-radius: $radius;
+}
+
+.radius\:full {
+    border-radius: $radius-full;
+}
+
+
+// opacity
+.opacity\:1 {
+    color: $color;
+    opacity: 0.6;
+}
+
+.opacity\:2 {
+    color: $color;
+    opacity: 0.4;
+}

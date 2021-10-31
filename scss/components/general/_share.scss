@@ -1,0 +1,105 @@
+.share-container {
+    color: $color;
+    top: 0;
+    position: fixed;
+    z-index: 99999999999;
+    background-color: rgba(#000, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    // display: none;
+
+    @include to(md) {
+        align-items: flex-end;
+    }
+
+    @include from(md) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .share {
+        background-color: $bg;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 22rem;
+
+        @include to(md) {
+            border-radius: rpt(2, 0.5rem) 0 0;
+            padding: 1rem;
+            max-width: 100%;
+        }
+    }
+
+    .share-title {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .share-close {
+        position: absolute;
+        right: 0.8rem;
+        top: 0.8rem;
+        cursor: pointer;
+
+        svg {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+
+    .share-description {
+        opacity: 0.6;
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+
+    .services {
+        margin-top: 1rem;
+        display: grid;
+        @include col(rpt(6, 1));
+        gap: 0.5rem;
+    }
+
+    .service {
+        @include center;
+        width: 2.8rem;
+        height: 2.8rem;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: $secondary-bg;
+
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+
+    .copy {
+        background-color: $secondary-bg;
+        cursor: pointer;
+    }
+
+    .reddit {
+        background-color: #FF5700;
+    }
+
+    .whatsapp {
+        background-color: #4FCE5D;
+    }
+
+    .twitter {
+        background-color: #1DA1F2;
+    }
+
+    .facebook {
+        background-color: #1778F2;
+    }
+
+    .telegram {
+        background-color: #0088cc;
+    }
+}

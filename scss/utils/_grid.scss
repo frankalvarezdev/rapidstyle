@@ -1,0 +1,36 @@
+.item {
+    @include from(md) {
+        &.has-transition {
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+.grid\:2 {
+    @include grid-generator((base: 1, sm: 2));
+}
+
+.grid\:4 {
+    @include grid-generator((base: 1, sm: 2, md: 4));
+}
+
+.grid\:6 {
+    @include grid-generator((base: 2, md: 4, lg: 6));
+}
+
+// gapp
+.gap\:sm {
+    gap: 1rem;
+}
+
+.gap {
+    gap: 1.5rem;
+}
+
+.gap\:lg {
+    gap: 2rem;
+}

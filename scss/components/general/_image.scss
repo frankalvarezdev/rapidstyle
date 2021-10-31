@@ -1,0 +1,79 @@
+.image {
+    width: 100%;
+    height: auto;
+
+    &.is-lazy {
+        fill: transparent;
+        background-color: $secondary-bg;
+        background-position: center;
+        background-size: cover;
+        animation: skeleton 1s infinite ease-in alternate;
+    }
+
+    &.is-dark {
+        background-color: $bg;
+    }
+
+    &.is-loaded {
+        animation: lazy-load 1.5s;
+        background-color: transparent;
+    }
+
+    &.is-square {
+        border-radius: $radius-sm;
+    }
+
+    &.is-circle {
+        border-radius: 6rem;
+    }
+
+    &.has-transition {
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+@keyframes skeleton {
+    0% {
+        opacity: 0.5;
+    }
+
+    40%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes lazy-load {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// @keyframes lazy-load {
+//     0% {
+//         background-color: $secondary-bg;
+//         background-image: none;
+//         opacity: 1;
+//     }
+//     40% {
+//         background-image: none;
+//         background-color: $secondary-bg;
+//         opacity: 0.5;
+//     }
+//     60% {
+//         background-color: transparent;
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }

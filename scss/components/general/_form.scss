@@ -1,0 +1,13 @@
+.field {
+    &:not(:last-child) {
+        margin-bottom: $margin-lg;
+    }
+}
+
+.label {
+    display: block;
+
+    &:not(:last-child) {
+        margin-bottom: .5em;
+    }
+}

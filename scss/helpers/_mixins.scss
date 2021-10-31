@@ -1,0 +1,51 @@
+@mixin input-element($bg, $color) {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: $radius-sm;
+    outline: none;
+    border: none;
+    background-color: $bg;
+    color: $color;
+    border-bottom: 2px solid $bg;
+
+    &:focus {
+        border-bottom: 2px solid $primary-color;
+    }
+}
+
+@mixin button-item($bg: #000, $color: #fff) {
+    background-color: $bg;
+    border: 1px solid $bg;
+    color: $color;
+}
+
+@mixin placeholder($background, $color) {
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus input:-webkit-autofill,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        border: none;
+        -webkit-text-fill-color: $color;
+        box-shadow: 0 0 0px 1000px $background inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+@mixin grid-generator($br) {
+    display: grid;
+    
+    @each $from, $value in $br {
+        @if ($from == xm or $from == base) { // base
+            grid-template-columns: rpt($value, 1fr);
+        } @else {
+            @include from($from) {
+                grid-template-columns: rpt($value, 1fr);
+            }
+        }
+    }
+}
