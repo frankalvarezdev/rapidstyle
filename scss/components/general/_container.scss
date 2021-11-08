@@ -1,0 +1,17 @@
+@mixin container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include from(md) {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+.container {
+    @include container;
+
+    &.has-top-margin {
+        padding-top: 1.5rem;
+    }
+}
