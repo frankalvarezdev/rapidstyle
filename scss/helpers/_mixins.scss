@@ -1,15 +1,15 @@
-@mixin input-element($bg, $color) {
+@mixin input-element($bg-color, $color) {
     width: 100%;
     padding: 8px 12px;
     border-radius: $radius-sm;
     outline: none;
     border: none;
-    background-color: $bg;
     color: $color;
-    border-bottom: 2px solid $bg;
+    border: 1px solid $border-color;
+    background-color: $bg;
 
     &:focus {
-        border-bottom: 2px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
     }
 }
 
